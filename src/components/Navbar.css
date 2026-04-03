@@ -1,0 +1,35 @@
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #020617;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .links.open {
+    display: flex;
+  }
+}

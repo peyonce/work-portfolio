@@ -26,6 +26,15 @@ export default function Projects() {
       github: "https://github.com/peyonce/RestaurantApp.git",
       live: "", // Add live link after hosting
     },
+    {
+    title: "Library Management System",
+    description: "A web application to manage library books, members, and checkouts. I focused on designing the database schema and connecting it to the application.",
+    role: "Database Designer & Backend Integration",
+    tech: "PostgreSQL, Express, React, Node.js",
+    github: "https://github.com/peyonce/Library-Management.git",
+    live: "",  // Add your live URL later
+    isTeamProject: false,
+},
     // Add your team project here
       {
       title: "Asset Management System",

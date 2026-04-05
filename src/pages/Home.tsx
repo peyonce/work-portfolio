@@ -37,7 +37,9 @@ export default function Home() {
                 "TypeScript",
                 "Firebase",
                 "Redux",
-                "Modern Web Technologies",
+                "PostgreSQL",
+                "Express",
+                "MySQL",
               ]}
               loop={true}
               cursor

@@ -1,26 +1,36 @@
-   import ProjectCard from "../components/ProjectCard";
+     import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   const projects = [
     {
       title: "UI Challenge App",
-      description: "A /mnt/chromeos/MyFiles/Downloads/cv.pdf..",
-      link: "https://github.com/peyonce/TYPESCRIP-TASK2.git",
+      description: "A TypeScript and React project building dynamic UI components with modern design principles.",
+      role: "Frontend Developer",
+      tech: "React, TypeScript, CSS",
+      github: "https://github.com/peyonce/TYPESCRIP-TASK2.git",
+      live: "", // Add live link after hosting
     },
     {
       title: "Shopping List App",
-      description: "A React + Redux app to manage shopping lists.",
-      link: "https://github.com/peyonce/ShoppingApp.git",
+      description: "A React + Redux app to manage shopping lists with add, edit, and delete functionality.",
+      role: "Frontend Developer",
+      tech: "React, Redux, JavaScript",
+      github: "https://github.com/peyonce/ShoppingApp.git",
+      live: "", // Add live link after hosting
     },
     {
       title: "Restaurant App",
-      description: "A responsive React app that displays restaurant information and menus using API integration..",
-      link: "https://github.com/peyonce/RestaurantApp.git",
+      description: "A responsive React app that displays restaurant information and menus using API integration.",
+      role: "Frontend Developer",
+      tech: "React, REST APIs, CSS",
+      github: "https://github.com/peyonce/RestaurantApp.git",
+      live: "", // Add live link after hosting
     },
+    // Add your team project here
   ];
 
   return (
-    <section id="projects"style={container}>
+    <section id="projects" style={container}>
       <h2 style={heading}>My Projects</h2>
       <div style={grid}>
         {projects.map((project, index) => (
@@ -28,7 +38,10 @@ export default function Projects() {
             key={index}
             title={project.title}
             description={project.description}
-            link={project.link}
+            role={project.role}
+            tech={project.tech}
+            github={project.github}
+            live={project.live}
           />
         ))}
       </div>

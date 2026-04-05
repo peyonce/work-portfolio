@@ -1,6 +1,6 @@
-  
- import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import heroImage from './hero.jpg';
 
 export default function Home() {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -66,22 +66,25 @@ export default function Home() {
             View My Projects
           </a>
 
-          <a
-            href="/cv.pdf"
-            download
-            style={{
-              ...secondaryButton,
-              transform: hovered === "cv" ? "translateY(-3px)" : "none",
-              boxShadow:
-                hovered === "cv"
-                  ? "0 8px 20px rgba(34, 197, 94, 0.4)"
-                  : "0 4px 10px rgba(0,0,0,0.3)",
-            }}
-            onMouseEnter={() => setHovered("cv")}
-            onMouseLeave={() => setHovered(null)}
-          >
-            📄 Download CV
-          </a>
+         <a
+  href="/Nthabisengcv.pdf"
+  download="Nthabiseng-cv-2026.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    ...secondaryButton,
+    transform: hovered === "cv" ? "translateY(-3px)" : "none",
+    boxShadow:
+      hovered === "cv"
+        ? "0 8px 20px rgba(34, 197, 94, 0.4)"
+        : "0 4px 10px rgba(0,0,0,0.3)",
+  }}
+  onMouseEnter={() => setHovered("cv")}
+  onMouseLeave={() => setHovered(null)}
+>
+  📄 Download CV
+  </a>
+
         </div>
 
         {/* Scroll indicator */}
@@ -103,7 +106,7 @@ const container: React.CSSProperties = {
   alignItems: "center",
   height: "100vh",
   textAlign: "center",
-  backgroundImage: "url('/hero.jpg')",
+  backgroundImage: `url(${heroImage})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",

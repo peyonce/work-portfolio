@@ -8,7 +8,7 @@ export default function Footer() {
         <a href="https://github.com/Peyonce" target="_blank" style={iconLink}>
           <FaGithub size={24} />
         </a>
-        <a href="www.linkedin.com/in/nthabiseng-phiri-6b9691214Vanity%20URL%20name" target="_blank" style={iconLink}>
+        <a href="https://www.linkedin.com/in/nthabiseng-phiri-6b9691214Vanity%20URL%20name" target="_blank" style={iconLink}>
           <FaLinkedin size={24} />
         </a>
         <a href="mailto:nthaynthabie1@gmail.com" style={iconLink}>

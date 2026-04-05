@@ -27,6 +27,15 @@ export default function Projects() {
       live: "", // Add live link after hosting
     },
     // Add your team project here
+      {
+      title: "Asset Management System",
+      description: "A full-stack web app for tracking and managing organizational assets. Features user authentication, real-time asset tracking, and a facilitator dashboard for asset allocation.",
+      role: "Backend Developer & Frontend (Facilitator Page)",
+      tech: "React, Firebase Auth, Firestore, TypeScript",
+      github: "https://github.com/mlab-aplha/asset-management-system.git",
+      live: "",
+      isTeamProject: true,
+    },
   ];
 
   return (
@@ -42,6 +51,8 @@ export default function Projects() {
             tech={project.tech}
             github={project.github}
             live={project.live}
+            isTeamProject={project.isTeamProject}
+
           />
         ))}
       </div>

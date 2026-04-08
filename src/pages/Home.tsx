@@ -69,7 +69,7 @@ export default function Home() {
           </a>
 
          <a
-  href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
+  href="Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
   download
   target="_blank"
   rel="noopener noreferrer"

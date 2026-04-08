@@ -69,8 +69,8 @@ export default function Home() {
           </a>
 
          <a
-  href="/Nthabisengcv.pdf"
-  download="Nthabiseng-cv-2026.pdf"
+  href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
+  download
   target="_blank"
   rel="noopener noreferrer"
   style={{

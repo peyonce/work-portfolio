@@ -69,8 +69,8 @@ export default function Home() {
           </a>
 
          <a
-  href="Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
-  download
+   href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
+  download="Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
   target="_blank"
   rel="noopener noreferrer"
   style={{
@@ -89,7 +89,7 @@ export default function Home() {
 
         </div>
 
-        {/* Scroll indicator */}
+         
         <div style={scrollIndicator}>
           <span style={arrow}>⬇</span>
           <p style={scrollText}>Scroll Down</p>
@@ -99,7 +99,7 @@ export default function Home() {
   );
 }
 
-// ======================== Styles ========================
+ 
 
 const container: React.CSSProperties = {
   position: "relative",

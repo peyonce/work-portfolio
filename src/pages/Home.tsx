@@ -69,8 +69,7 @@ export default function Home() {
           </a>
 
          <a
-   href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
-  download="Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf"
+  href="/download.html"
   target="_blank"
   rel="noopener noreferrer"
   style={{
@@ -85,7 +84,7 @@ export default function Home() {
   onMouseLeave={() => setHovered(null)}
 >
   📄 Download CV
-  </a>
+</a>
 
         </div>
 

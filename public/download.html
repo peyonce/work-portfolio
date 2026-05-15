@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Downloading your CV...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #0f172a;
+            color: white;
+        }
+        .container {
+            padding: 40px;
+            background: #1e293b;
+            border-radius: 12px;
+        }
+        a {
+            color: #38bdf8;
+        }
+        .error {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Preparing your download...</h2>
+        <div id="status">
+            <p>Starting download automatically...</p>
+        </div>
+    </div>
+
+    <script>
+        fetch('/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf')
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Nthabiseng_Phiri_CV.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                document.getElementById('status').innerHTML = `
+                    <p style="color: #22c55e;">✅ Download started!</p>
+                    <p>If it didn't work, <a href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf" target="_blank">click here</a> to view your CV.</p>
+                `;
+            })
+            .catch(error => {
+                document.getElementById('status').innerHTML = `
+                    <p class="error">❌ Download failed</p>
+                    <p><a href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf" target="_blank">Click here to view your CV</a></p>
+                    <p>Then right-click and select "Save as" to download.</p>
+                `;
+            });
+    </script>
+</body>
+</html>

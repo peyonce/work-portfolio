@@ -7,15 +7,15 @@ export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setLoaded(true); // trigger animation
+    setLoaded(true); 
   }, []);
 
   return (
     <section style={container}>
-      {/* Overlay layer */}
+      
       <div style={overlayLayer}></div>
 
-      {/* Hero Content */}
+      
       <div
         style={{
           ...overlayContent,

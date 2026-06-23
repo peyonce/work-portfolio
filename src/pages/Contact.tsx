@@ -1,4 +1,4 @@
-     import React, { useState } from "react";
+  import React, { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [hovered, setHovered] = useState(false); // added for hover effect
+  const [hovered, setHovered] = useState(false); 
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -114,7 +114,7 @@ export default function Contact() {
   );
 }
 
-// ======================== Styles ========================
+ 
 
 const container: React.CSSProperties = {
   padding: "50px 20px",

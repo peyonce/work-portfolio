@@ -8,7 +8,7 @@ export default function Projects() {
       role: "Frontend Developer",
       tech: "React, TypeScript, CSS",
       github: "https://github.com/peyonce/TYPESCRIP-TASK2.git",
-      live: "", // Add live link after hosting
+      live: "https://typescrip-task-2-dogr.vercel.app/"
     },
     {
       title: "Shopping List App",
@@ -16,14 +16,6 @@ export default function Projects() {
       role: "Frontend Developer",
       tech: "React, Redux, JavaScript",
       github: "https://github.com/peyonce/ShoppingApp.git",
-      live: "", // Add live link after hosting
-    },
-    {
-      title: "Restaurant App",
-      description: "A responsive React app that displays restaurant information and menus using API integration.",
-      role: "Frontend Developer",
-      tech: "React, REST APIs, CSS",
-      github: "https://github.com/peyonce/RestaurantApp.git",
       live: "", // Add live link after hosting
     },
     {

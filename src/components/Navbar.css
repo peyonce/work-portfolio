@@ -3,7 +3,7 @@
   gap: 20px;
 }
 
-/* Hamburger hidden on desktop */
+
 .hamburger {
   display: none;
   font-size: 24px;
@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-/* Mobile styles */
+ 
 @media (max-width: 768px) {
   .hamburger {
     display: block;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,53 +13,82 @@
             text-align: center;
             background: #0f172a;
             color: white;
+            margin: 0;
         }
         .container {
             padding: 40px;
             background: #1e293b;
             border-radius: 12px;
+            max-width: 500px;
+        }
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #1e293b;
+            border-top: 4px solid #38bdf8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         a {
             color: #38bdf8;
+            text-decoration: underline;
+        }
+        .success {
+            color: #22c55e;
         }
         .error {
             color: #ef4444;
+        }
+        .countdown {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #38bdf8;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="spinner"></div>
         <h2>Preparing your download...</h2>
         <div id="status">
-            <p>Starting download automatically...</p>
+            <p>Your CV will download shortly.</p>
+            <p class="countdown" id="countdown">3</p>
         </div>
     </div>
 
     <script>
-        fetch('/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf')
-            .then(response => response.blob())
-            .then(blob => {
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Nthabiseng_Phiri_CV.pdf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-                
-                document.getElementById('status').innerHTML = `
-                    <p style="color: #22c55e;">✅ Download started!</p>
-                    <p>If it didn't work, <a href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf" target="_blank">click here</a> to view your CV.</p>
-                `;
-            })
-            .catch(error => {
-                document.getElementById('status').innerHTML = `
-                    <p class="error">❌ Download failed</p>
-                    <p><a href="/Nthabiseng_Phiri_Junior_Web_Developer_CV.pdf" target="_blank">Click here to view your CV</a></p>
-                    <p>Then right-click and select "Save as" to download.</p>
-                `;
-            });
+        // Start download after 1 second
+        setTimeout(() => {
+            window.location.href = '/Nthabiseng_Phiri_CV.pdf';
+        }, 1000);
+
+        // Countdown display
+        let count = 3;
+        const countdownEl = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            count--;
+            if (count > 0) {
+                countdownEl.textContent = count;
+            } else {
+                countdownEl.textContent = '⬇ Downloading...';
+                clearInterval(interval);
+            }
+        }, 1000);
+
+        // Fallback: if download doesn't start
+        setTimeout(() => {
+            document.getElementById('status').innerHTML = `
+                <p class="success">✅ Download should have started.</p>
+                <p>If it didn't, <a href="/Nthabiseng_Phiri_CV.pdf" target="_blank">click here</a> to view your CV.</p>
+                <p>Then right-click and select "Save as" to download.</p>
+            `;
+        }, 5000);
     </script>
 </body>
 </html>

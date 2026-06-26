@@ -1,6 +1,6 @@
-     import ProjectCard from "../components/ProjectCard";
+ import ProjectCard from "../components/ProjectCard";
 
-export default function Projects() {
+ export default function Projects() {
   const projects = [
     {
       title: "UI Challenge App",
@@ -16,19 +16,10 @@ export default function Projects() {
       role: "Frontend Developer",
       tech: "React, Redux, JavaScript",
       github: "https://github.com/peyonce/ShoppingApp.git",
-      live: "", // Add live link after hosting
+      live: "https://teekay-12-shoppinglistapp--syyc9y97gs.expo.app"
     },
     {
-    title: "Library Management System",
-    description: "A web application to manage library books, members, and checkouts. I focused on designing the database schema and connecting it to the application.",
-    role: "Database Designer & Backend Integration",
-    tech: "PostgreSQL, Express, React, Node.js",
-    github: "https://github.com/peyonce/Library-Management.git",
-    live: "",  // Add your live URL later
-    isTeamProject: false,
-},
-    // Add your team project here
-      {
+     
       title: "Asset Management System",
       description: "A full-stack web app for tracking and managing organizational assets. Features user authentication, real-time asset tracking, and a facilitator dashboard for asset allocation.",
       role: "Backend Developer & Frontend (Facilitator Page)",

@@ -23,7 +23,7 @@ export default function Projects() {
       description: "A collection of 6 Python practice projects from FNB App of the Year 2026, covering data types, user input, arithmetic operations, and interactive applications.",
       role: "Python Developer",
       tech: "Python 3.9",
-      github: "https://github.com/peyonce/fnb-python-lessons",
+      github: "https://github.com/peyonce/python_lessons.git",
       // live: ""  <-- Removed entirely
     },
   ];

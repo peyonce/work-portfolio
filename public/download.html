@@ -63,12 +63,11 @@
     </div>
 
     <script>
-        // Start download after 1 second
+        
         setTimeout(() => {
             window.location.href = '/Nthabiseng_Phiri_CV.pdf';
         }, 1000);
 
-        // Countdown display
         let count = 3;
         const countdownEl = document.getElementById('countdown');
         const interval = setInterval(() => {
@@ -81,7 +80,6 @@
             }
         }, 1000);
 
-        // Fallback: if download doesn't start
         setTimeout(() => {
             document.getElementById('status').innerHTML = `
                 <p class="success">✅ Download should have started.</p>

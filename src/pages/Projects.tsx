@@ -1,6 +1,6 @@
  import ProjectCard from "../components/ProjectCard";
 
- export default function Projects() {
+export default function Projects() {
   const projects = [
     {
       title: "UI Challenge App",
@@ -19,14 +19,12 @@
       live: "https://teekay-12-shoppinglistapp--syyc9y97gs.expo.app"
     },
     {
-     
-      title: "Asset Management System",
-      description: "A full-stack web app for tracking and managing organizational assets. Features user authentication, real-time asset tracking, and a facilitator dashboard for asset allocation.",
-      role: "Backend Developer & Frontend (Facilitator Page)",
-      tech: "React, Firebase Auth, Firestore, TypeScript",
-      github: "https://github.com/mlab-aplha/asset-management-system.git",
-      live: "",
-      isTeamProject: true,
+      title: "FNB Python Practice Portfolio",
+      description: "A collection of 6 Python practice projects from FNB App of the Year 2026, covering data types, user input, arithmetic operations, and interactive applications.",
+      role: "Python Developer",
+      tech: "Python 3.9",
+      github: "https://github.com/peyonce/fnb-python-lessons",
+      // live: ""  <-- Removed entirely
     },
   ];
 
@@ -42,9 +40,7 @@
             role={project.role}
             tech={project.tech}
             github={project.github}
-            live={project.live}
-            isTeamProject={project.isTeamProject}
-
+            live={project.live}  // Will be undefined for Python project
           />
         ))}
       </div>
